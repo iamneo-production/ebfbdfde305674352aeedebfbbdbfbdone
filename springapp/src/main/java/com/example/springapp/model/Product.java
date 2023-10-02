@@ -2,8 +2,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Positive;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
 
 
 @Entity
@@ -12,13 +12,13 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotEmpty(message = "Name is required")
+    
     private String name;
 
-    @Min(value = 0, message = "Price must be greater than or equal to 0")
+    
     private double price;
 
-    @Min(value = 0, message = "Quantity must be greater than or equal to 0")
+   
     private int quantity;
 
     public Product() {
