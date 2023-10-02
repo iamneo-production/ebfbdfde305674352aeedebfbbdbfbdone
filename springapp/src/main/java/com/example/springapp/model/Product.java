@@ -1,11 +1,10 @@
 package com.example.springapp.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Positive;
+import org.hibernate.validator.constraints.NotBlank;
+
+import jakarta.persistence.*;
+
+
 
 @Entity
 public class Product {
@@ -13,13 +12,13 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Name is required")
+    @NotEmpty(message = "Name is required")
     private String name;
 
-    @Positive(message = "Price must be greater than 0")
+    @Min(value = 0, message = "Price must be greater than or equal to 0")
     private double price;
 
-    @Positive(message = "Quantity must be greater than 0")
+    @Min(value = 0, message = "Quantity must be greater than or equal to 0")
     private int quantity;
 
     public Product() {
