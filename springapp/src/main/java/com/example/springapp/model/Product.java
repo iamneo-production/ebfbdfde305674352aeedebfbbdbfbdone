@@ -4,8 +4,6 @@ import org.hibernate.validator.constraints.NotBlank;
 
 import jakarta.persistence.*;
 
-
-
 @Entity
 public class Product {
     @Id

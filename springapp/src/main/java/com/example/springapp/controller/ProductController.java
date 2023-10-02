@@ -1,4 +1,4 @@
-package com.example.inventory.controller;
+package com.example.springapp.controller;
 
 import com.example.springapp.model.Product;
 import com.example.springapp.repository.ProductRepository;
@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController
