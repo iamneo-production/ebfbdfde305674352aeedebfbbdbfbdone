@@ -1,8 +1,10 @@
-package com.example.springapp.model;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Positive;
 
-import org.hibernate.validator.constraints.NotBlank;
-
-import jakarta.persistence.*;
 
 @Entity
 public class Product {
